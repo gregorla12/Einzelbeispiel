@@ -16,6 +16,7 @@ import java.net.Socket;
 public class MainActivity extends AppCompatActivity {
     TextView answer;
     Button send;
+    Button calc;
     EditText matNo;
     private DataOutputStream toServer;
     private BufferedReader fromServer;
@@ -28,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
         matNo = findViewById(R.id.editTextNumber);
         send = findViewById(R.id.send);
         send.setOnClickListener(v -> new Thread(new SendMessageThread()).start());
+        calc = findViewById(R.id.calc);
+        calc.setOnClickListener(v -> answer.append("\nresult: " + doCalcultarion(matNo.getText().toString())));
     }
+
 
     class SendMessageThread implements Runnable {
         @Override
@@ -49,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(() -> answer.append("failed somehow..."));
             }
         }
+    }
+
+    private String doCalcultarion(String matNo) {
+        int sum = 0;
+        for (char digit : matNo.toCharArray())
+            sum += Integer.valueOf(digit + "");
+        String binary = "";
+        while (sum > 0) {
+            binary = sum % 2 + binary;
+            sum /= 2;
+        }
+        return binary;
     }
 
 }

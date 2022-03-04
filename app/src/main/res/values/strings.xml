@@ -4,4 +4,5 @@
     <string name="_sample_matNo">012345678</string>
     <string name="antwort_kommt_hier">Antwort kommt hier</string>
     <string name="antwort_holen">Antwort holen</string>
+    <string name="rechnen_ausf_hren">Rechnen ausführen</string>
 </resources>

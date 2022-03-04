@@ -34,4 +34,10 @@
         android:layout_height="wrap_content"
         android:text="@string/antwort_holen" />
 
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rechnen_ausf_hren" />
+
 </LinearLayout>
