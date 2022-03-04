@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Einzelbeispiel</string>
+    <string name="bitte_mattikelnummer_eingeben">bitte Mattikelnummer eingeben</string>
+    <string name="_sample_matNo">012345678</string>
+    <string name="antwort_kommt_hier">Antwort kommt hier</string>
+    <string name="antwort_holen">Antwort holen</string>
+</resources>
